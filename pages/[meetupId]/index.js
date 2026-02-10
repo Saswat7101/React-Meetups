@@ -13,6 +13,7 @@ export default function MeetupDetails() {
 
 export async function getStaticPaths() {
   return {
+    fallback: false,
     paths: [
       {
         params: {
