@@ -1,7 +1,11 @@
-import MeetupItem from './MeetupItem';
-import classes from './MeetupList.module.css';
+import MeetupItem from "./MeetupItem";
+import classes from "./MeetupList.module.css";
 
 function MeetupList(props) {
+  if (!props.meetups) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <ul className={classes.list}>
       {props.meetups.map((meetup) => (
